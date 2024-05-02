@@ -1,23 +1,18 @@
-# Projet PHP Impératif 
+# Blog Wolf - Esprit Sauvage - 
 
-titre de mon blog qui est Esprits Sauvage, et la phrase d'accroche sera Découvrir le Monde Secret des Loups.
+Découvrir le Monde Secret des Loups.
 
 ## Cloner le projet
 ```
-git clone https://github.com/lana-12/phpImperatif.git
+git clone https://github.com/lana-12/blog_wolf
 ```
 
 
-## Lancer le serveur
+## Start server
 
 Commande :
 ```
 php -S localhost:8000
 ```
 
-## Pour se connecter
 
-```
-Email : vivi@gmail.com
-MDP   : vivi
-```
