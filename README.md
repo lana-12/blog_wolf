@@ -1,6 +1,6 @@
 # Blog Wolf - Esprit Sauvage - 
 
-Découvrir le Monde Secret des Loups.
+Découvrez le Monde Secret des Loups.
 
 ## Cloner le projet
 ```

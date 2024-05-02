@@ -1,12 +1,17 @@
-// Imports utils
-@import "./scss/utils/reset.scss";
-@import "./scss/utils/mixins.scss";
+// Imports generals
+@import "./scss/generals/reset.scss";
+@import "./scss/generals/variables.scss";
+@import "./scss/generals/mixins.scss";
 
 
-// Imports modules
-@import "./scss/modules/footer.scss";
-@import "./scss/modules/user.scss";
-@import "./scss/modules/btn.scss";
+// Imports components
+@import "./scss/components/footer.scss";
+@import "./scss/components/img.scss";
+
+
+
+// Imports layouts
+@import "./scss/layouts/home.scss";
 
 
 

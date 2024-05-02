@@ -1,0 +1,17 @@
+.imgIntroHome {
+    width: 300px;
+    max-height: 450px;
+}
+
+
+
+
+/********MEDIA QUERY POUR ECRAN 768px***********/
+/******min-width 768px**************/
+@include media-breakpoint("md") {
+    .imgIntroHome {
+        max-width: 800px;
+    }
+    
+    
+}
