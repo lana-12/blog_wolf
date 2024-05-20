@@ -1,3 +1,8 @@
+<?php
+
+?>
+
+
 <h2 class="text-center m-5">Découvrez le Monde Secret des Loups</h2>
 
 <section class="container home">
@@ -27,12 +32,15 @@
 
 </section>
 
+
+<!-- Categories -->
+    <?php
+        require_once(dirname(__FILE__) . '/category/categories.php');
+    ?>
+
+
 <!-- Articles récents -->
 <section>
     <h2>Articles Récents</h2>
 </section>
 
-<!-- Categories -->
-<section>
-    <h2>Catégories</h2>
-</section>

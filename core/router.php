@@ -7,7 +7,11 @@ if(isset($_GET['page'])){
         case 'quiSommesNous':
             $page = 'about.php';
             break;
-        
+
+        case 'categorie':
+            $page = 'category/category.php';
+            break;
+    
         case 'membres':
             $page = 'teams.php';
             break;
