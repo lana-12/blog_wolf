@@ -13,6 +13,6 @@
     <!-- My Style -->
     <link rel="stylesheet" href="../../assets/styles/style.css">
 
-    <title>Wolf | <?= (isset($_GET['page']) ? $_GET['page'] : ''); ?></title>
+    <title>Esprits Sauvages | <?= (isset($_GET['page']) ? $_GET['page'] : ''); ?></title>
 
 </head>

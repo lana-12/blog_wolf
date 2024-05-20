@@ -3,6 +3,11 @@
 
 <?php
 
+// Inclure le fichier de configuration
+require_once './config/config.php';
+
+
+
 require_once(dirname(__FILE__) . '/views/includes/head.php');
 
 ?>
@@ -10,11 +15,10 @@ require_once(dirname(__FILE__) . '/views/includes/head.php');
 <body>
 
         <?php
-
-        require_once(dirname(__FILE__) . '/views/includes/header.php');
+            require_once(dirname(__FILE__) . '/views/includes/header.php');
         ?>
 
-    <main class="container">
+    <main class="" id="app">
         
         <?php
             require_once(dirname(__FILE__) . '/core/router.php') ;
@@ -24,9 +28,7 @@ require_once(dirname(__FILE__) . '/views/includes/head.php');
 
 
         <?php
-
             require_once(dirname(__FILE__) . '/views/includes/footer.php');
-
         ?>
 
 

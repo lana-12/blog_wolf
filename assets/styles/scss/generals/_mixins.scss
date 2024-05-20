@@ -1,3 +1,5 @@
+
+//Custom btn
 @mixin btnCustom($bgcH,
     $fgcH) {
     margin: 5px;
@@ -9,5 +11,13 @@
         background-color: $bgcH;
         color: $fgcH;
         cursor: pointer;
+    }
+}
+
+
+// Media query 
+@mixin media-breakpoint($size) {
+    @media screen and (min-width: map-get($breakpoints, $size)) {
+        @content;
     }
 }
