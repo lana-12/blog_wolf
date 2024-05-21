@@ -1,7 +1,7 @@
 <?php
 
-require(dirname(__FILE__) . '/../src/utils/functions.php');
-require(dirname(__FILE__) . '/../src/models/user.php');
+require(dirname(__FILE__) . '/../../src/utils/functions.php');
+require(dirname(__FILE__) . '/../../src/models/user.php');
 
 $users  = getUsers();
 

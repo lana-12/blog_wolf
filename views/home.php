@@ -12,7 +12,7 @@
 
             <div class="boxTextHome">
                 <p class="pTextHome">
-                    <span class="titleBlog"><?= NAME_BLOG ?></span>, je vous invite à plonger dans l'univers fascinant de ces créatures emblématiques. Que vous soyez un passionné de la vie sauvage, un amateur de folklore ou simplement curieux de découvrir la beauté et la complexité des loups, vous êtes au bon endroit.
+                    <span class="titleBlog"><?= NAME_BLOG ?></span>, vous invite à plonger dans l'univers fascinant de ces créatures emblématiques. Que vous soyez un passionné de la vie sauvage, un amateur de folklore ou simplement curieux de découvrir la beauté et la complexité des loups, vous êtes au bon endroit.
                 </p>
         
                 <p class="pTextHome">

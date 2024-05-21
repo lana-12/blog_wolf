@@ -1,8 +1,8 @@
 <?php
 session_start();
-require_once(dirname(__FILE__) . '/../core/security.php');
-require_once(dirname(__FILE__) . '/../src/utils/functions.php');
-require_once(dirname(__FILE__) . '/../src/models/user.php');
+require_once(dirname(__FILE__) . '/../../core/security.php');
+require_once(dirname(__FILE__) . '/../../src/utils/functions.php');
+require_once(dirname(__FILE__) . '/../../src/models/user.php');
 
 $users = getUsers();
 

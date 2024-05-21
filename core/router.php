@@ -1,45 +1,46 @@
 <?php
+
+
+$pageMappings = [
+    'àPropos' => 'about.php',
+    'category' => [
+        'categorie' => 'category/category.php',
+        'categories' => 'category/categories.php'
+    ],
+    'user' => [
+        'membres' => 'user/teams.php',
+        'creation' => 'user/createUser.php',
+        'delete' => 'user/delete.php',
+        'update' => 'user/update.php'
+    ],
+    'connexion' => 'login.php',
+    'deconnexion' => 'logout.php'
+];
+
+// Default Page
 $page = 'home.php';
 
-if(isset($_GET['page'])){
-    switch ($_GET['page']){
-        
-        case 'quiSommesNous':
-            $page = 'about.php';
-            break;
+// Function for search the page in the array $pageMappings
+function findPage($key, $mappings) {
+    foreach ($mappings as $section => $routes) {
+        if (is_array($routes)) {
+            if (array_key_exists($key, $routes)) {
+                return $routes[$key];
+            }
+        } elseif ($section === $key) {
+            return $routes;
+        }
+    }
+    return null;
+}
 
-        case 'categorie':
-            $page = 'category/category.php';
-            break;
-    
-        case 'membres':
-            $page = 'teams.php';
-            break;
 
-        case 'connexion':
-            $page = 'login.php';
-            break;
-
-        case 'deconnexion':
-            $page = 'logout.php';
-            break;
-
-        case 'creation':
-            $page = 'createUser.php';
-            break;
-
-        case 'delete':
-            $page = 'delete.php';
-            break;
-
-        case 'update':
-            $page = 'update.php';
-            break;
-
-        default:
-            $page = 'home.php';
-            break;
+if (isset($_GET['page'])) {
+    $foundPage = findPage($_GET['page'], $pageMappings);
+    if ($foundPage) {
+        $page = $foundPage;
     }
 }
 
 require_once(dirname(__FILE__) . '/../views/' . $page);
+?>
