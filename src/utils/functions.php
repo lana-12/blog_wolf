@@ -1,5 +1,51 @@
 <?php
 
+
+/**
+ * Retrieve DomainName complet ex=> wwww.exemple.fr
+ * @param url of the file csv
+ * 
+ */
+function extractDomainName($url){
+
+    // dump($_SERVER["HTTP_REFERER"]);
+    // dump(parse_url($_SERVER["HTTP_REFERER"], PHP_URL_HOST));
+
+    preg_match('/https?:\/\/(www\.[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})/', $url, $matches);
+
+    if (!empty($matches[1])) {
+        $domain = $matches[1];
+        return $domain;  
+    } 
+    return null;
+
+}
+
+
+/**
+ * makes var_dump more readable
+ * @param variable
+ * @return void
+ */
+function dump($variable)
+{
+    echo '
+        <pre>';
+
+            var_dump($variable);
+    echo 
+        '</pre>';
+}
+
+
+
+
+
+
+
+
+
+
 /**
  * Sort by alpha order
  * @param array $users
@@ -43,17 +89,3 @@ function getSortOrder()
 }
 
 
-/**
- * makes var_dump more readable
- * @param variable
- * @return void
- */
-function dump($variable)
-{
-    echo '
-        <pre>';
-
-            var_dump($variable);
-    echo 
-        '</pre>';
-}

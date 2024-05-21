@@ -5,7 +5,8 @@ $pageMappings = [
     'àPropos' => 'about.php',
     'category' => [
         'categorie' => 'category/category.php',
-        'categories' => 'category/categories.php'
+        'categories' => 'category/categories.php',
+        'detail'=> 'category/detailCategory.php'
     ],
     'user' => [
         'membres' => 'user/teams.php',

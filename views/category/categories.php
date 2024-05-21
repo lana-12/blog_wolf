@@ -4,7 +4,8 @@ require(dirname(__FILE__) . '/../../src/utils/functions.php');
 require(dirname(__FILE__) . '/../../src/models/category.php');
 
 
-$categories = getCategory();
+$categories = getCategories();
+
 // var_dump($categories);
 
  
