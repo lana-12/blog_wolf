@@ -28,6 +28,8 @@ function getCategory() {
     }
 }
 
+
+
 function getCategoryById($id) {
     $categories = getCategory(); 
 

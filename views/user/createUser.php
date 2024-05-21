@@ -1,5 +1,5 @@
 <?php
-require(dirname(__FILE__). '/../src/models/user.php');
+require(dirname(__FILE__). '/../../src/models/user.php');
 setUser();
 
 ?>

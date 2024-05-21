@@ -15,7 +15,6 @@ if (isset($_GET['id'])) {
 
         echo "<h2>" . htmlspecialchars($category['id']) . "</h2>";
         echo "<h2>" . htmlspecialchars($category['title']) . "</h2>";
-        echo "<p>" . htmlspecialchars($category['description']) . "</p>";
 
     } else {
         echo "<p>Catégorie non trouvée.</p>";

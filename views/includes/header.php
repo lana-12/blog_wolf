@@ -18,10 +18,10 @@ session_start();
                         <a class="nav-link " href="/index.php?page=accueil">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/index.php?page=quiSommesNous">Qui nous sommes ?</a>
+                        <a class="nav-link" href="/index.php?page=àPropos">À propos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/index.php?page=membres">Les Membres</a>
+                        <a class="nav-link" href="/index.php?page=categories">Les categories</a>
                     </li>
                 </ul>
 
