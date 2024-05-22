@@ -13,6 +13,6 @@
     <!-- My Style -->
     <link rel="stylesheet" href="../../assets/styles/style.css">
 
-    <title>Esprits Sauvages | <?= (isset($_GET['page']) ? $_GET['page'] : ''); ?></title>
+    <title><?= NAME_BLOG ?> | <?= (isset($_GET['page']) ? $_GET['page'] : ''); ?></title>
 
 </head>
