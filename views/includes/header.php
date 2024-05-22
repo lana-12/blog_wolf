@@ -6,7 +6,7 @@ session_start();
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
         <div class="container-fluid">
             <a class="navbar-brand" href="/index.php?page=accueil">
-                <h1>Esprits Sauvages</h1>
+                <h1><?= NAME_BLOG ?></h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
