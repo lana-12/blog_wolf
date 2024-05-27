@@ -20,7 +20,7 @@ function getCategories() {
             ];
         }
         fclose($file_pointer);
-        
+
         return $categories;
 
     } else {
@@ -47,6 +47,7 @@ function getCategoryById($id) {
 // Retrieve data of the file csv
 function getDataFromCsv($folderName, $fileName) {
     $file_path = dirname(__FILE__) . '/../datas/' . $folderName.'/'.$fileName.'.csv';
+    dump($file_path);
     $dataCsv = [];
 
     if (file_exists($file_path)) {
@@ -64,7 +65,7 @@ function getDataFromCsv($folderName, $fileName) {
         }
         fclose($file_pointer);
     } else {
-        echo 'Oups, une errrreur est survenue lors de l\'ouverture du fichier !!!';
+        echo 'Ouppppps, une errrreur est survenue lors de l\'ouverture du fichier !!!';
     }
 
     return $dataCsv;

@@ -39,7 +39,7 @@ function getUnderCategories($folder) {
     } else {
         echo 'Oups, une erreur est survenue lors de l\'ouverture du fichier !!!';
     }
-    
+
     return ['data' => $undercategories, 'introCategorie' => $introCategorie];
 
    
