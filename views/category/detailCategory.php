@@ -2,36 +2,42 @@
 
 require(dirname(__FILE__) . '/../../src/utils/functions.php');
 require(dirname(__FILE__) . '/../../src/models/category.php');
+require(dirname(__FILE__) . '/../../src/models/underCategory.php');
 
 // Mapping des sous-catégories aux fichiers CSV
 $subCategoryFiles = [
     1 => 'meute.csv',
     2 => 'hierarchie.csv',
     3 => 'anatomie.csv',
-    18 => 'dreams.csv'
+    16 => 'dreams.csv'
 ];
 
 
-if (isset($_GET['id'])) {
+if (isset($_GET['id']) && isset($_GET['categorie'])) {
+    // Retrieve name folder
+    //dump($_GET['categorie']);
+    $folder = $_GET['categorie'];
 
-$subCategoryId = (int)$_GET['id'] ;
-$underCategory = getNameUnderCategoryById($subCategoryId);
+    // Retrieve id underCategorie
+    $subCategoryId = (int)$_GET['id'];
+    //dump($subCategoryId);
+    
+    $underCategory = getNameUnderCategoryById($subCategoryId, $folder );
+    //dump($underCategory);
 
-    if ($subCategoryId && isset($subCategoryFiles[$subCategoryId])) {
+    if ($subCategoryId && isset($underCategory)) {
         // Chemin du fichier CSV pour la sous-catégorie
-        $filename = $subCategoryFiles[$subCategoryId];
+        $filename = strtolower($underCategory['title']);
 
-        // Chargement des données du fichier CSV
-        $result = getDataFromCsv($filename);
-        $subCategoryData = $result['data'];
-        $specialLinks = $result['specialLinks'];
+        $subCategoryData = getDataFromCsv($folder, $filename);
+        //dump($subCategoryData);
 
     } else {
         echo '
         <div class="alert alert-danger m-5" role="alert">
             <p class="text-center">Une erreur est survenue ! Sous-catégorie non trouvée ou fichier CSV manquant.</p>
         </div>';
-    }
+}
  
 } else {
     echo '
@@ -48,25 +54,6 @@ $underCategory = getNameUnderCategoryById($subCategoryId);
         <p class="mt-4"> <?= htmlspecialchars($underCategory['description']) ?> </p>
 
     </section>
-
-<?php if ($specialLinks ) : ?>
-    <div class="row">
-        <div class="col">
-            <h3>Voici quelques liens pour en savoir plus</h3>
-            <?php $links= $specialLinks[0]['link']; 
-                foreach ($links as $link):  ?>
-                    <ul>
-                        <li>
-                            <a href=<?= htmlspecialchars($link) ?> target="_blank" rel="noopener noreferrer">
-                            <?= htmlspecialchars(extractDomainName($link)) ?>
-                            </a>
-                        </li>
-                    </ul>               
-                <?php endforeach; ?>
-        </div>
-    </div>
-<?php endif; ?>
-
 
     <div class="row">
         <div class="col m-4">

@@ -2,16 +2,31 @@
 
 require(dirname(__FILE__) . '/../../src/utils/functions.php');
 require(dirname(__FILE__) . '/../../src/models/category.php');
+require(dirname(__FILE__) . '/../../src/models/underCategory.php');
 
 
 
 if (isset($_GET['id'])) {
+    
     $categoryId = intval($_GET['id']);
     $category = getCategoryById($categoryId);
 
-    if ($category) {
-        $undercategories = getUnderCategories();
+    // dump(strtolower($category['title']));
+    // dump($category['title']);
 
+    $folder = strtolower($category['title']);
+    // dump($folder);
+
+    if ($category) {
+        $result = getUnderCategories($folder);
+        
+        
+        $undercategories = $result['data'];
+        // dump($undercategories);
+        
+        
+        $intro = $result['introCategorie'][0]['intro'];
+        // dump($intro);
 
     } else {
         echo '
@@ -30,8 +45,13 @@ if (isset($_GET['id'])) {
 ?>
 
     <section class="container mt-5">
+        hrel
         <h2 class="mb-4"><?= htmlspecialchars($category['title']) ?></h2>
         <h2 class="mb-4"><?= htmlspecialchars($category['id']) ?></h2>
+        <p><?= htmlspecialchars($intro) ?></p>
+
+
+        
 
     </section>        
 
@@ -48,7 +68,7 @@ if (isset($_GET['id'])) {
                             <div class="card-body text-center">
                                 <h5 class="card-title "><?= $undercategory['title'] ?></h5>
                                 
-                                <a href="/index.php?page=detail&id=<?= htmlspecialchars($undercategory['id']) ?>" class="btn btn-primary m-3"> En savoir plus</a>
+                                <a href="/index.php?categorie=<?= htmlspecialchars(strtolower($category['title'])) ?>&page=detail&id=<?= htmlspecialchars($undercategory['id']) ?>" class="btn btn-primary m-3"> En savoir plus</a>
 
                             </div>
                         </div>
