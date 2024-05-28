@@ -45,10 +45,13 @@ if (isset($_GET['id'])) {
 ?>
 
     <section class="container mt-5">
-        hrel
-        <h2 class="mb-4"><?= htmlspecialchars($category['title']) ?></h2>
-        <h2 class="mb-4"><?= htmlspecialchars($category['id']) ?></h2>
-        <p><?= htmlspecialchars($intro) ?></p>
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center mb-4"><?= htmlspecialchars($category['title']) ?></h2>
+                <h2 class="mb-4"><?= htmlspecialchars($category['id']) ?></h2>
+                <p><?= htmlspecialchars($intro) ?></p>
+            </div>
+        </div>
 
 
         
