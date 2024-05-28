@@ -6,6 +6,8 @@
 // Inclure le fichier de configuration
 require_once './config/config.php';
 
+echo $_SERVER['QUERY_STRING'];
+
 
 
 require_once(dirname(__FILE__) . '/views/includes/head.php');
@@ -19,7 +21,15 @@ require_once(dirname(__FILE__) . '/views/includes/head.php');
         ?>
 
     <main class="" id="app">
-        
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Library</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+    </nav>
+
         <?php
             require_once(dirname(__FILE__) . '/core/router.php') ;
         ?>

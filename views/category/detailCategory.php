@@ -4,14 +4,6 @@ require(dirname(__FILE__) . '/../../src/utils/functions.php');
 require(dirname(__FILE__) . '/../../src/models/category.php');
 require(dirname(__FILE__) . '/../../src/models/underCategory.php');
 
-// Mapping des sous-catégories aux fichiers CSV
-$subCategoryFiles = [
-    1 => 'meute.csv',
-    2 => 'hierarchie.csv',
-    3 => 'anatomie.csv',
-    16 => 'dreams.csv'
-];
-
 
 if (isset($_GET['id']) && isset($_GET['categorie'])) {
     // Retrieve name folder
